@@ -42,6 +42,10 @@ class AzureAuth {
 
   public function setCode($provider) {
     print_r($_GET);
+    $provider->tenant = "kvaesb2ctest.onmicrosoft.com";
+    $provider->pathAuthorize = "/oauth2/v2.0/authorize";
+    $provider->pathToken = "/oauth2/v2.0/token";
+    $provider->scope = ["openid"];
     $token = $provider->getAccessToken('authorization_code', [
       'code' => $_GET['code'],
       'resource' => 'https://graph.windows.net',
