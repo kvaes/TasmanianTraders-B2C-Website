@@ -51,14 +51,14 @@
 
         // Do not modify
         var responseType = 'token id_token';
-        var redirectURI = '../redirect.html';
+        var redirectURI = 'https://b2c.kvaes.be/redirect.html';
 
         //initiate all policies
         hello.init({
             adB2CSignInSignUp: applicationId,
             adB2CEditProfile: applicationId
         }, {
-            redirect_uri: '../redirect.html',
+            redirect_uri: 'https://b2c.kvaes.be/redirect.html',
             scope: 'openid ' + scope,
             response_type: 'token id_token'
         });
